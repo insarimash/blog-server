@@ -25,7 +25,9 @@ mongoose.connection.on('connected', () => {
 app.use('/posts',require('./routes/posts.js'))
 app.use('/auth', require('./routes/auth'))
 
+const PORT = process.env.PORT ?? 3004;
+
 app.listen(3004, () =>{
-    console.log("http://localhost:3004");
+    console.log(`http://localhost:${PORT}`);
 });
 
